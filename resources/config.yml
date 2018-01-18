@@ -1,0 +1,34 @@
+# Elytradactyl by Kyle Nanakdewa
+# Configuration
+
+# Thank you for using Elytradactyl! See my other plugins at http://akenland.com/plugins
+
+# Don't change the formatting of this file, or Bukkit will complain. To reset this config to default, just delete it.
+# We recommend using VS Code (https://code.visualstudio.com/) to modify this file, as it will help you with formatting.
+# Do NOT use tabs (tab indent) - use spaces. VS Code will automatically insert spaces, but other text editors won't.
+
+# Full documentation can be found at http://akenland.com/plugins/elytradactyl
+# After editing this file, use "/elytradactyl reload" to load your changes into the server.
+
+
+# Use TRUE or FALSE to specify whether that mob can use Elytra to fly!
+mobs:
+  # For players, this will automatically activate their Elytra, instead of them having to jump while mid-air. Default FALSE.
+  player: FALSE
+
+  # Citizens NPCs. Requires the Citizens plugin to be installed! Default TRUE.
+  npc: TRUE
+
+  # Skeletons, firing arrows from the air! Default TRUE.
+  skeleton: TRUE
+
+  # Zombies, undead and airborne! Default TRUE.
+  zombie: TRUE
+
+
+# The time (in ticks, 20 ticks = 1 second), that a mob must fall, before they activate their Elytra and start gliding. Default 10.
+# The number of blocks a mob must fall, before they activate their Elytra and start gliding. Default 2.
+delay: 10
+
+# How frequently (in ticks) to check for falling entities. Default 40.
+check-ticks: 40
