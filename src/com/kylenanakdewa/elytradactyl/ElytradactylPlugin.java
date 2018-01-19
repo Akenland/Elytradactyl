@@ -77,6 +77,7 @@ public final class ElytradactylPlugin extends JavaPlugin {
 				for(LivingEntity entity : world.getLivingEntities()){
 					// If falling, tracked by plugin, and is wearing Elytra...
 					if(isFalling(entity) && isTracked(entity)
+					 && entity.getEquipment().getChestplate()!=null
 					 && entity.getEquipment().getChestplate().getType().equals(Material.ELYTRA)){
 						// Start gliding
 						entity.setGliding(true);
