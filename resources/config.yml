@@ -20,10 +20,13 @@ mobs:
   npc: TRUE
 
   # Monsters. Most will pick up dropped Elytra automatically. Default TRUE.
-  monsters: TRUE
+  monster: TRUE
 
   # Animals. The Elytra won't be visible, but can be equipped via commands or external editors. Default TRUE.
-  zombie: TRUE
+  animal: TRUE
+
+  # All other mobs. Default FALSE.
+  other: FALSE
 
 
 # How frequently (in ticks) to check for falling mobs. Default 20 (every second).

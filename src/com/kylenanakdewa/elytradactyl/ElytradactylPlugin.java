@@ -111,16 +111,15 @@ public final class ElytradactylPlugin extends JavaPlugin {
 		return !entity.isOnGround()
 		 // Entity must have air below them
 		 && entity.getLocation().subtract(0, 1, 0).getBlock().isEmpty()
-		 // Entity must not be a player, or...
-		 && (!(entity instanceof Player)
-		 // If entity is a player, they must not be flying
-		  || !((Player)entity).isFlying());
+		 && entity.getLocation().subtract(0, 2, 0).getBlock().isEmpty()
+		 // Entity must not be a player, or they must not be flying
+		 && (!(entity instanceof Player) || !((Player)entity).isFlying());
     }
 
 	/** Checks if the given entity should activate Elytra when falling. */
     private boolean isTracked(LivingEntity entity){
-		if(entity instanceof Player) return playerUsesElytra;
 		if(entity.hasMetadata("NPC")) return npcUsesElytra;
+		if(entity instanceof Player) return playerUsesElytra;
 		if(entity instanceof Monster) return monsterUsesElytra;
 		if(entity instanceof Animals) return animalUsesElytra;
 
