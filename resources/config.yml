@@ -16,19 +16,19 @@ mobs:
   # For players, this will automatically activate their Elytra, instead of them having to jump while mid-air. Default FALSE.
   player: FALSE
 
-  # Citizens NPCs. Requires the Citizens plugin to be installed! Default TRUE.
+  # NPCs from the Citizens plugin. Default TRUE.
   npc: TRUE
 
-  # Skeletons, firing arrows from the air! Default TRUE.
-  skeleton: TRUE
+  # Monsters. Most will pick up dropped Elytra automatically. Default TRUE.
+  monsters: TRUE
 
-  # Zombies, undead and airborne! Default TRUE.
+  # Animals. The Elytra won't be visible, but can be equipped via commands or external editors. Default TRUE.
   zombie: TRUE
 
 
-# The time (in ticks, 20 ticks = 1 second), that a mob must fall, before they activate their Elytra and start gliding. Default 10.
-# The number of blocks a mob must fall, before they activate their Elytra and start gliding. Default 2.
-delay: 10
+# How frequently (in ticks) to check for falling mobs. Default 20 (every second).
+check-ticks: 20
 
-# How frequently (in ticks) to check for falling entities. Default 40.
-check-ticks: 40
+# Whether to re-assign mob directions after they start gliding. Default TRUE.
+# When false, most mobs only fly south. Does not affect players or NPCs.
+reassign-direction: TRUE

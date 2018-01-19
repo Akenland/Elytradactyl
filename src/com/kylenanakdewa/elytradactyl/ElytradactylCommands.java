@@ -19,6 +19,7 @@ public class ElytradactylCommands implements TabExecutor {
 			sender.sendMessage("Elytradactyl "+ElytradactylPlugin.plugin.getDescription().getVersion()+" by Kyle Nanakdewa");
             sender.sendMessage("- Mobs use Elytra to glide!");
             sender.sendMessage("- Website: http://Akenland.com/plugins");
+            sender.sendMessage("- Checking for falling mobs every "+ElytradactylPlugin.checkTicks+" ticks.");
 			return true;
         }
 
