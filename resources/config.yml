@@ -1,14 +1,8 @@
-# Elytradactyl by Kyle Nanakdewa
-# Configuration
+# Elytradactyl by Kade
+# https://plugins.akenland.com
 
-# Thank you for using Elytradactyl! See my other plugins at http://akenland.com/plugins
-
-# Don't change the formatting of this file, or Bukkit will complain. To reset this config to default, just delete it.
-# We recommend using VS Code (https://code.visualstudio.com/) to modify this file, as it will help you with formatting.
-# Do NOT use tabs (tab indent) - use spaces. VS Code will automatically insert spaces, but other text editors won't.
-
-# Full documentation can be found at http://akenland.com/plugins/elytradactyl
 # After editing this file, use "/elytradactyl reload" to load your changes into the server.
+# To reset this config to default, delete it, and then reload.
 
 
 # Use TRUE or FALSE to specify whether that mob can use Elytra to fly!
@@ -25,9 +19,8 @@ mobs:
   # Animals. The Elytra won't be visible, but can be equipped via commands or external editors. Default TRUE.
   animal: TRUE
 
-  # All other mobs. Default FALSE.
+  # Any other mobs. Default FALSE.
   other: FALSE
-
 
 # How frequently (in ticks) to check for falling mobs. Default 20 (every second).
 check-ticks: 20

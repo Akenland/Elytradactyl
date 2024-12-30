@@ -1,12 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.kylenanakdewa</groupId>
+  <groupId>com.akenland</groupId>
   <artifactId>Elytradactyl</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 
   <build>
     <sourceDirectory>${basedir}/src</sourceDirectory>
@@ -18,8 +17,8 @@
     </resources>
   </build>
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
   </properties>
 
   <repositories>
@@ -27,26 +26,20 @@
       <id>spigot-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
-    <repository>
-      <id>citizens-repo</id>
-      <url>http://repo.citizensnpcs.co/</url>
-    </repository>
   </repositories>
 
   <dependencies>
-    <!--Spigot API-->
+    <!--Spigot-API-->
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
+      <version>1.21.3-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
-    <!--Citizens API-->
     <dependency>
-	    <groupId>net.citizensnpcs</groupId>
-	    <artifactId>citizensapi</artifactId>
-	    <version>2.0.22-SNAPSHOT</version>
-	    <scope>compile</scope>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>plugin-annotations</artifactId>
+      <version>1.2.3-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
