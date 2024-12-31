@@ -91,10 +91,11 @@ public final class ElytradactylPlugin extends JavaPlugin {
 			for (World world : Bukkit.getWorlds()) {
 				// For every living entity...
 				for (LivingEntity entity : world.getLivingEntities()) {
-					// If falling, tracked by plugin, and is wearing Elytra...
+					// If falling, tracked by plugin, and is wearing Elytra or any glider item...
 					if (isFalling(entity) && isTracked(entity)
 							&& entity.getEquipment().getChestplate() != null
-							&& entity.getEquipment().getChestplate().getType().equals(Material.ELYTRA)) {
+							&& (entity.getEquipment().getChestplate().getType().equals(Material.ELYTRA)
+									|| entity.getEquipment().getChestplate().getItemMeta().isGlider())) {
 
 						// Get current location
 						Location loc = entity.getLocation();
