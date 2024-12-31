@@ -8,6 +8,7 @@ import org.bukkit.entity.Animals;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.annotation.plugin.ApiVersion;
 import org.bukkit.plugin.java.annotation.plugin.Description;
@@ -92,11 +93,7 @@ public final class ElytradactylPlugin extends JavaPlugin {
 				// For every living entity...
 				for (LivingEntity entity : world.getLivingEntities()) {
 					// If falling, tracked by plugin, and is wearing Elytra or any glider item...
-					if (isFalling(entity) && isTracked(entity)
-							&& entity.getEquipment().getChestplate() != null
-							&& (entity.getEquipment().getChestplate().getType().equals(Material.ELYTRA)
-									|| entity.getEquipment().getChestplate().getItemMeta().isGlider())) {
-
+					if (isFalling(entity) && isTracked(entity) && isGlider(entity.getEquipment().getChestplate())) {
 						// Get current location
 						Location loc = entity.getLocation();
 
@@ -136,6 +133,19 @@ public final class ElytradactylPlugin extends JavaPlugin {
 			return animalUsesElytra;
 
 		return otherUsesElytra;
+	}
+
+	/**
+	 * Checks if the given item is a glider (either Elytra or has glider component).
+	 */
+	private boolean isGlider(ItemStack item) {
+		if (item == null)
+			return false;
+
+		if (item.getType().equals(Material.ELYTRA))
+			return true;
+
+		return item.hasItemMeta() && item.getItemMeta().isGlider();
 	}
 
 }
