@@ -6,11 +6,12 @@ import java.util.List;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
+import org.bukkit.plugin.java.annotation.command.Commands;
 
 /**
  * Commands for the Elytradactyl plugin.
  */
-@org.bukkit.plugin.java.annotation.command.Command(name = "elytradactyl", desc = "View plugin information, and reload the plugin.", usage = "/elytradactyl [version|reload]", permission = "elytradactyl.admin")
+@Commands(@org.bukkit.plugin.java.annotation.command.Command(name = "elytradactyl", desc = "View plugin information, and reload the plugin.", usage = "/elytradactyl [version|reload]", permission = "elytradactyl.admin"))
 public class ElytradactylCommands implements TabExecutor {
 
     private final ElytradactylPlugin plugin;

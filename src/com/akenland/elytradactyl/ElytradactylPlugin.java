@@ -45,7 +45,7 @@ public final class ElytradactylPlugin extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		// Main command
-		// getCommand("elytradactyl").setExecutor(new ElytradactylCommands(this));
+		getCommand("elytradactyl").setExecutor(new ElytradactylCommands(this));
 
 		// Run all reload tasks
 		reload();
