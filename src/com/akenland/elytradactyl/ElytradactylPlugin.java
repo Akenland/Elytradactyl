@@ -21,9 +21,9 @@ import org.bukkit.plugin.java.annotation.plugin.author.Author;
  * Main plugin class for Elytradactyl.
  */
 @Plugin(name = "Elytradactyl", version = "1.1")
-@Description(value = "Mobs use Elytra to glide!")
-@Author(value = "Kade")
-@Website(value = "https://plugins.akenland.com")
+@Description("Mobs use Elytra to glide!")
+@Author("Kade")
+@Website("https://plugins.akenland.com/Elytradactyl")
 @ApiVersion(Target.v1_20)
 public final class ElytradactylPlugin extends JavaPlugin {
 
